@@ -1,0 +1,17 @@
+# Data-science
+scipy
+pandas
+# Medical imaging
+SimpleITK
+nibabel
+pynrrd
+# Machine-learning
+scikit-learn
+scikit-image
+# Data visualization
+matplotlib
+seaborn
+# Utility packages
+tqdm
+
+lightning

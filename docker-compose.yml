@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  debug:
+    container_name: hyunseoki_MAE
+    build:
+      context: $PWD
+      args:
+        - USER
+        - XDG_RUNTIME_DIR
+    image: hyunseoki/mae
+    tty: true
+    stdin_open: true
+    shm_size: 1TB
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              capabilities: [ gpu ]
+              count: all
+    volumes:
+      - $PWD:/workspace
